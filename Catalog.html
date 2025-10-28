@@ -20,10 +20,15 @@
                 <li><a href="Catalog.html">Catalogus</a></li>
                 <li><a href="#">Organisatie</a></li>
                 <li><a href="#">Donatie</a></li>
-                <li><label><input type="search" id="search" name="search" placeholder="Zoek een boek..."></label></li>
-                <li><button><i class="fa-solid fa-magnifying-glass"></i></button></li>
+                
             </ul>
         </nav>
+        <hr class="header-separator" aria-hidden="true">
+        <div class="search-bar">
+            <label for="search" class="visually-hidden">Zoek een boek</label>
+            <input type="search" id="search" name="search" placeholder="Zoek een boek..." aria-label="Zoek een boek">
+            <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
         </div>
     </header>
 
@@ -42,25 +47,30 @@
                 <h2>Boek 3</h2>
                 <img src="assets/img/boek_preview/Boek3.jpg" alt="Boek 3">
             </div>
+            <div class="book">
+                <h2>Boek 4</h2>
+                <img src="assets/img/boek_preview/Boek3.jpg" alt="Boek 4">
+            </div>
         </div>
     </section>
 </main>
 
-    <footer>
-        <ul class="page_links">
-            <li><a href="#">Adres</a></li>
-            <li><a href="#">Openingstijden</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Vacatures</a></li>
-            <li><a href="#">Privacybeleid</a></li>
-        </ul>
-        <ul class="socials">
-            <li><a href="https://www.linkedin.com/company/embassy-of-the-free-mind/"><button><i class="fa-brands fa-linkedin"></i></button></a></li>
-            <li><a href="https://www.instagram.com/embassyofthefreemind/"><button><i class="fa-brands fa-instagram"></i></button></a></li>
-            <li><a href="https://www.facebook.com/embassyofthefreemind/"><button><i class="fa-brands fa-facebook"></i></button></a></li>
-            <li><a href="http://www.youtube.com/theritmanlibrary"><button><i class="fa-brands fa-youtube"></i></button></a></li>
-        </ul>
-    </footer>
+<footer>
+    <ul class="page_links">
+        <li><a href="#">Adres</a></li>
+        <li><a href="#">Openingstijden</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Vacatures</a></li>
+        <li><a href="#">Privacybeleid</a></li>
+    </ul>
+    <ul class="socials">
+        <li><a href="https://www.linkedin.com/company/embassy-of-the-free-mind/" aria-label="Embassy of the Free Mind on LinkedIn" title="Embassy of the Free Mind on LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/embassyofthefreemind/" aria-label="Embassy of the Free Mind on Instagram" title="Embassy of the Free Mind on Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/embassyofthefreemind/" aria-label="Embassy of the Free Mind on Facebook" title="Embassy of the Free Mind on Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="http://www.youtube.com/theritmanlibrary" aria-label="Embassy of the Free Mind on YouTube" title="Embassy of the Free Mind on YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+    </ul>
+</footer>
+
 </body>
 </html>

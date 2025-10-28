@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 h1, h2, h3, h4, h5, p, a, span, summary, details { 
     color: white;
     font-family: Muli, sans-serif;
@@ -8,6 +14,8 @@ a {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     width:100%;
     margin: 0;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
@@ -15,15 +23,20 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-color: black;
-    section {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+}
+
+main {
+    flex: 1;
+}
+
+section {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 header {
     background-color: rgb(7, 0, 48);
-    height: 5em;
+    height: auto;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -35,7 +48,8 @@ header {
 
 .header-container {
     display: flex;
-    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     padding-right: 1em;
@@ -70,9 +84,59 @@ nav {
 
 input#search {
     border: none;
-    border-radius: 5px;
-    padding: 5px;
-    margin-right: -60px;
+    border-radius: 12px;
+    padding: 12px 16px;
+    background: white;
+    color: #111;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Search bar container shown beneath the nav links */
+.search-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 2rem 1rem 1rem;
+    border-bottom: 3px solid rgba(255,255,255,0.08);
+    height: 40px;
+}
+
+.search-bar input#search {
+    width: 15%;
+    max-width: 700px;
+    height: 35px;
+}
+
+.search-bar button {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Utility: visually hidden but available to screen readers */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+/* subtle separator between nav links and search bar */
+.header-separator {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: rgba(255,255,255,0.15);
+    margin: 0;
 }
 
 button i {
@@ -88,6 +152,10 @@ i {
     margin-top: 2.5px;
 }
 
+i.fa-brands {
+    scale: 1.5;
+}
+
 .BookDescription {
     color: rgb(200, 200, 200);
 }
@@ -97,6 +165,7 @@ a:hover {
 }
 
 footer {
+    position: static;
     background-color: rgb(7, 0, 48);
     height:3.5em;
     display: flex;
@@ -126,7 +195,7 @@ footer {
 
 .socials {
     justify-content: flex-end;
-    gap: 2em;
+    gap: 3em;
     margin-right: 20px;
 }
 
@@ -137,7 +206,7 @@ footer {
 }
 
 .book-caroussel {
-    background-color: rgb(7, 0, 48);
+    background-color: rgb(5, 0, 33);
     width: 600px;
     border-radius: 20px;
     padding: 20px;
@@ -243,15 +312,14 @@ summary {
 }
 
 .book-grid {
-
     gap: 50px;
     text-align: center;
-    width: 90%;
+    width: 95%;
     margin: 20px auto;
     height: auto;
     @media (min-width: 724px) {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
