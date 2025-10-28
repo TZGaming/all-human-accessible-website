@@ -359,7 +359,8 @@ summary {
 }
 
 .museum-grid {
-    gap: 50px;
+    display: grid;
+    gap: 20px;
     text-align: center;
     width: 95%;
     margin: 20px auto;
@@ -564,6 +565,15 @@ summary {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+
+    .museum-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .museum {
+        padding: 3px;
+        border-radius: 5px;
     }
 
     .blog-grid {
