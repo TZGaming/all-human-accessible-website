@@ -12,15 +12,18 @@
     <header>
     <div class="header-container">
         <div class="logo">
-            <a href="#"><img src="assets/img/logo.png" alt="EFM" height="80"></a>
+            <a href="index.html"><img src="assets/img/logo.png" alt="EFM" height="80"></a>
         </div>
-        <nav>
+        <!-- Mobile menu toggle -->
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="main-nav">
             <ul>
                 <li><a href="#">Tickets</a></li>
                 <li><a href="Catalog.html">Catalogus</a></li>
                 <li><a href="#">Organisatie</a></li>
                 <li><a href="#">Donatie</a></li>
-                
             </ul>
         </nav>
         <hr class="header-separator" aria-hidden="true">
@@ -36,19 +39,19 @@
     <section>
         <div class="book-grid">
             <div class="book">
-                <h2>Boek 1</h2>
+                <h1>Boek 1</h1>
                 <img src="assets/img/boek_preview/Boek1.jpg" alt="Boek 1">
             </div>
             <div class="book">
-                <h2>Boek 2</h2>
+                <h1>Boek 2</h1>
                 <img src="assets/img/boek_preview/Boek2.jpg" alt="Boek 2">
             </div>
             <div class="book">
-                <h2>Boek 3</h2>
+                <h1>Boek 3</h1>
                 <img src="assets/img/boek_preview/Boek3.jpg" alt="Boek 3">
             </div>
             <div class="book">
-                <h2>Boek 4</h2>
+                <h1>Boek 4</h1>
                 <img src="assets/img/boek_preview/Boek3.jpg" alt="Boek 4">
             </div>
         </div>
@@ -71,6 +74,27 @@
         <li><a href="http://www.youtube.com/theritmanlibrary" aria-label="Embassy of the Free Mind on YouTube" title="Embassy of the Free Mind on YouTube"><i class="fa-brands fa-youtube"></i></a></li>
     </ul>
 </footer>
+
+<!-- Mobile menu toggle script -->
+<script>
+    (function () {
+        const btn = document.querySelector('.menu-toggle');
+        const headerContainer = document.querySelector('.header-container');
+        if (!btn || !headerContainer) return;
+        btn.addEventListener('click', function () {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!expanded));
+            headerContainer.classList.toggle('open');
+        });
+        // close menu automatically when resizing to desktop
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768) {
+                headerContainer.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    })();
+</script>
 
 </body>
 </html>
