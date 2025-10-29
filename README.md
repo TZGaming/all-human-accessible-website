@@ -16,6 +16,10 @@ Ik heb mijn home page en catalogus page een re-design gegeven. Tijdens de vorige
 # Verbeteringen
 Ik heb alle feedback van de vorige sprint review opgenomen in aparte issues en ze 1 voor 1 opgelost in deze sprint. Ik heb bijvoorbeeld een hamburger menu toegevoegd in de header voor telefoons & tablets, zodat het standaard niet de hele website vult. Ook is de responsiveness verbeterd en resized alles nu correct mee. De grids zijn ook verbeterd, ze staan nu op telefoon 2x2 naast elkaar in plaats van 1x1, dat was namelijk te groot. De cards vulde de hele website en anders was het veel te veel scrollen.
 
+### Oud - Nieuw
+<img width="340" height="2100" alt="Screenshot_20251029_111511_Chrome-portrait" src="https://github.com/user-attachments/assets/f34ecc9d-f89b-41d6-9c80-b52e852c001a" />
+<img width="340" height="2100" alt="Screenshot_20251029_104108_Chrome-portrait" src="https://github.com/user-attachments/assets/dfb65e41-95ae-4b75-81b8-d6613564dcb7" />
+
 # WCAG Audit Test (Gemaakt op 28-10-2025)
 De score was 83/100. Er zijn een paar problemen voor screenreaders, de buttons en a links hebben namelijk geen aparte IDs/alts dus de screenreader geeft geen unieke namen aan voor die elementen. Verder gingen de keyboard, interactive en headings & landmarks tests goed, daar waren geen problemen mee.
 
