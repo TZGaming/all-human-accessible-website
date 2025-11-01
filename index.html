@@ -14,7 +14,7 @@
         <div class="logo">
             <a href="index.html"><img src="assets/img/logo.png" alt="EFM" height="80"></a>
         </div>
-        <!-- Mobile menu toggle -->
+        <!-- Hamburger button -->
         <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -76,7 +76,7 @@
         </ul>
     </footer>
 
-<!-- Mobile menu toggle script -->
+<!-- Hamburger toggle -->
 <script>
     (function () {
         const btn = document.querySelector('.menu-toggle');
@@ -87,7 +87,7 @@
             btn.setAttribute('aria-expanded', String(!expanded));
             headerContainer.classList.toggle('open');
         });
-        // close menu automatically when resizing to desktop
+
         window.addEventListener('resize', function () {
             if (window.innerWidth > 768) {
                 headerContainer.classList.remove('open');
